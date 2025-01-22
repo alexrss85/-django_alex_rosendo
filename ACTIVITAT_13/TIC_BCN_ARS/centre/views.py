@@ -1,15 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def teachers(request):
 
-    professor = {"name": "Roger", "surname": "Sobrino", "age": "17"}
-    template = loader.get_template('index_centre.html')
+    professor1 = {"id": 1, "name": "Roger", "surname": "Sobrino", "age": "39", "curs":"DAM2B, DAW2A"}
+    professor2 = {"id": 2, "name": "Oriol", "surname": "Roca", "age": "25", "curs":"DAW2B, DAW2A, DAW1A"}
+    professor3 = {"id": 3, "name": "Juanma", "surname": "Biel", "age": "24", "curs":"DAM2B, DAW2A"}
+    
 
-    dades = template.render({'nombre': professor["name"], 
-                             'surname': professor["surname"], 
-                             'age': professor["age"]})
-
-    return HttpResponse(dades)
+    return render(request, 'teachers.html', {"professor1": professor1,"professor2": professor2,"professor3": professor3})
