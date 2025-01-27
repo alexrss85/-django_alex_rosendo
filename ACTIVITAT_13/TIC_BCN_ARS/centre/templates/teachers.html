@@ -1,44 +1,45 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professorat TIC Barcelona</title>
-</head>
-<body>
+{% extends 'index.html' %}
+{% block content %}
 
     <h2>INFORMACIÓ PROFESSORAT TIC BARCELONA</h2>
 
     <table border="1">
         <tr>
-            <th>ID</th>
             <th>NOM</th>
-            <th>COGNOM</th>
-            <th>EDAT</th>
+            <th>COGNOM 1</th>
+            <th>COGNOM 2</th>
+            <th>EMAIL</th>
             <th>CURS</th>
+            <th>TUTOR</th>
+            <th>MODUL</th>
         </tr>
         <tr>
-            <td>{{ professor1.id }}</td> 
-            <td>{{ professor1.name }}</td>
-            <td>{{ professor1.surname }}</td>
-            <td>{{ professor1.age }}</td>
+            <td>{{ professor1.nom }}</td> 
+            <td>{{ professor1.cognom1 }}</td>
+            <td>{{ professor1.cognom2 }}</td>
+            <td>{{ professor1.email }}</td>
             <td>{{ professor1.curs }}</td>
+            <td>{{ professor1.tutor }}</td>
+            <td>{{ professor1.moduls }}</td>
         </tr>
         <tr>
-            <td>{{ professor2.id }}</td>
-            <td>{{ professor2.name }}</td>
-            <td>{{ professor2.surname }}</td>
-            <td>{{ professor2.age }}</td>
+            <td>{{ professor2.nom }}</td> 
+            <td>{{ professor2.cognom1 }}</td>
+            <td>{{ professor2.cognom2 }}</td>
+            <td>{{ professor2.email }}</td>
             <td>{{ professor2.curs }}</td>
+            <td>{{ professor2.tutor }}</td>
+            <td>{{ professor2.moduls }}</td>
         </tr>
         <tr>
-            <td>{{ professor3.id }}</td>
-            <td>{{ professor3.name }}</td>
-            <td>{{ professor3.surname }}</td>
-            <td>{{ professor3.age }}</td>
+            <td>{{ professor3.nom }}</td> 
+            <td>{{ professor3.cognom1 }}</td>
+            <td>{{ professor3.cognom2 }}</td>
+            <td>{{ professor3.email }}</td>
             <td>{{ professor3.curs }}</td>
+            <td>{{ professor3.tutor }}</td>
+            <td>{{ professor3.moduls }}</td>
         </tr>
     </table>
 
-</body>
-</html>
+{% endblock %}
