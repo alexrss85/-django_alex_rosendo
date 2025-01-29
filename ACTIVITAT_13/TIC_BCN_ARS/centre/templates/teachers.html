@@ -6,40 +6,27 @@
     <table border="1">
         <tr>
             <th>NOM</th>
-            <th>COGNOM 1</th>
-            <th>COGNOM 2</th>
+            <th>COGNOM1</th>
+            <th>COGNOM2</th>
             <th>EMAIL</th>
             <th>CURS</th>
             <th>TUTOR</th>
-            <th>MODUL</th>
+            <th>MÒDULS</th>
+            <th>Detalls</th>
         </tr>
+        
+        {% for professor in professors %}
         <tr>
-            <td>{{ professor1.nom }}</td> 
-            <td>{{ professor1.cognom1 }}</td>
-            <td>{{ professor1.cognom2 }}</td>
-            <td>{{ professor1.email }}</td>
-            <td>{{ professor1.curs }}</td>
-            <td>{{ professor1.tutor }}</td>
-            <td>{{ professor1.moduls }}</td>
+            <td>{{ professor.nom }}</td>
+            <td>{{ professor.cognom1 }}</td>
+            <td>{{ professor.cognom2 }}</td>
+            <td>{{ professor.email }}</td>
+            <td>{{ professor.curs }}</td>
+            <td>{{ professor.tutor }}</td>
+            <td>{{ professor.moduls }}</td>
+            <td><a href="{% url 'teacher_detail' professor.id %}">Veure més</a></td>
         </tr>
-        <tr>
-            <td>{{ professor2.nom }}</td> 
-            <td>{{ professor2.cognom1 }}</td>
-            <td>{{ professor2.cognom2 }}</td>
-            <td>{{ professor2.email }}</td>
-            <td>{{ professor2.curs }}</td>
-            <td>{{ professor2.tutor }}</td>
-            <td>{{ professor2.moduls }}</td>
-        </tr>
-        <tr>
-            <td>{{ professor3.nom }}</td> 
-            <td>{{ professor3.cognom1 }}</td>
-            <td>{{ professor3.cognom2 }}</td>
-            <td>{{ professor3.email }}</td>
-            <td>{{ professor3.curs }}</td>
-            <td>{{ professor3.tutor }}</td>
-            <td>{{ professor3.moduls }}</td>
-        </tr>
+        {% endfor %}
     </table>
 
 {% endblock %}

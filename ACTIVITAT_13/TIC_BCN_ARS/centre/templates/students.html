@@ -5,41 +5,27 @@
 
     <table border="1">
         <tr>
-
             <th>NOM</th>
             <th>COGNOM1</th>
             <th>COGNOM2</th>
             <th>EMAIL</th>
             <th>CURS</th>
-            <th>MODULS</th>
+            <th>MÒDULS</th>
+            <th>Detalls</th>
         </tr>
+        
+        {% for student in alumnes %}
         <tr>
-
-            <td>{{ student1.nom }}</td>
-            <td>{{ student1.cognom1 }}</td>
-            <td>{{ student1.cognom2 }}</td>
-            <td>{{ student1.email }}</td>
-            <td>{{ student1.curs }}</td>
-            <td>{{ student1.moduls }}</td>
+            <td>{{ student.nom }}</td>
+            <td>{{ student.cognom1 }}</td>
+            <td>{{ student.cognom2 }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.curs }}</td>
+            <td>{{ student.moduls }}</td>
+            <td><a href="{% url 'student_detail' student.id %}">Veure més</a></td> 
         </tr>
-        <tr>
+        {% endfor %}
 
-            <td>{{ student2.nom }}</td>
-            <td>{{ student2.cognom1 }}</td>
-            <td>{{ student2.cognom2 }}</td>
-            <td>{{ student2.email }}</td>
-            <td>{{ student2.curs }}</td>
-            <td>{{ student2.moduls }}</td>
-        </tr>
-        <tr>
-
-            <td>{{ student3.nom }}</td>
-            <td>{{ student3.cognom1 }}</td>
-            <td>{{ student3.cognom2 }}</td>
-            <td>{{ student3.email }}</td>
-            <td>{{ student3.curs }}</td>
-            <td>{{ student3.moduls }}</td>
-        </tr>
     </table>
 
 
