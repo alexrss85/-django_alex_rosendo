@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'centre.apps.CentreConfig',
     'pasApas.apps.PasapasConfig',
+    'autenticacio.apps.AutenticacioConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -59,6 +61,7 @@ TEMPLATES = [
         'DIRS': [
             BASE_DIR / 'centre/templates',
             BASE_DIR / 'templates',
+            BASE_DIR / 'autenticacio/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
