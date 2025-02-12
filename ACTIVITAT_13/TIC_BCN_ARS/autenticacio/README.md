@@ -1,5 +1,4 @@
 1. Configuració projecte:
-    - url:
+    - settings:
         ![alt text](img/image.png)
-    -settings:
         ![alt text](img/image1.png)
