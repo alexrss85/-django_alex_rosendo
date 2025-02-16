@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h2>Detalls del professor</h2>
+
+    <p><strong>Nom:</strong> {{ teacher.nom }}</p>
+    <p><strong>Cognom1:</strong> {{ teacher.cognom1 }}</p>
+    <p><strong>Cognom2:</strong> {{ teacher.cognom2 }}</p>
+    <p><strong>Email:</strong> {{ teacher.email }}</p>
+    <p><strong>Curs:</strong> {{ teacher.curs }}</p>
+    <p><strong>Tutor:</strong> {{ teacher.tutor }}</p>
+    <p><strong>Mòduls:</strong> {{ teacher.moduls }}</p>
+
+    <a href="{% url 'teachers' %}">Tornar</a>
+{% endblock %}

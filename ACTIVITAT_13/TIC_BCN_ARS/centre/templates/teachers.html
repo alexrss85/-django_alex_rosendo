@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+
+    <h2>INFORMACIÓ PROFESSORAT TIC BARCELONA</h2>
+
+    <table border="1">
+        <tr>
+            <th>NOM</th>
+            <th>COGNOM1</th>
+            <th>COGNOM2</th>
+            <th>EMAIL</th>
+            <th>CURS</th>
+            <th>TUTOR</th>
+            <th>MÒDULS</th>
+            <th>Detalls</th>
+        </tr>
+        
+        {% for professor in professors %}
+        <tr>
+            <td>{{ professor.nom }}</td>
+            <td>{{ professor.cognom1 }}</td>
+            <td>{{ professor.cognom2 }}</td>
+            <td>{{ professor.email }}</td>
+            <td>{{ professor.curs }}</td>
+            <td>{{ professor.tutor }}</td>
+            <td>{{ professor.moduls }}</td>
+            <td><a href="{% url 'teacher_detail' professor.id %}">Veure més</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

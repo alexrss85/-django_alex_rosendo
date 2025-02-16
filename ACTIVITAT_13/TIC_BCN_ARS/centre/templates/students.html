@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+
+    <h2>INFORMACIÓ ALUMNAT TIC BARCELONA</h2>
+
+    <table border="1">
+        <tr>
+            <th>NOM</th>
+            <th>COGNOM1</th>
+            <th>COGNOM2</th>
+            <th>EMAIL</th>
+            <th>CURS</th>
+            <th>MÒDULS</th>
+            <th>Detalls</th>
+        </tr>
+        
+        {% for student in alumnes %}
+        <tr>
+            <td>{{ student.nom }}</td>
+            <td>{{ student.cognom1 }}</td>
+            <td>{{ student.cognom2 }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.curs }}</td>
+            <td>{{ student.moduls }}</td>
+            <td><a href="{% url 'student_detail' student.id %}">Veure més</a></td> 
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+{% endblock %}
